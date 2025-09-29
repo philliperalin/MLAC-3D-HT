@@ -1,0 +1,8 @@
+2025-09-23 15:34:13.523030 starting: opening PstFrom.log for logging
+2025-09-23 15:34:13.525028 starting PstFrom process
+2025-09-23 15:34:13.526034 starting: setting up dirs
+2025-09-23 15:34:13.527034 starting: removing existing new_d 'PMW-6_template'
+2025-09-23 15:34:13.594939 finished: removing existing new_d 'PMW-6_template' took: 0:00:00.067905
+2025-09-23 15:34:13.594939 starting: copying original_d '..\results\3d_injection_modeling_PMW-6' to new_d 'PMW-6_template'
+2025-09-23 15:34:17.502400 finished: copying original_d '..\results\3d_injection_modeling_PMW-6' to new_d 'PMW-6_template' took: 0:00:03.907461
+2025-09-23 15:34:17.502400 finished: setting up dirs took: 0:00:03.976366

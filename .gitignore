@@ -1,1 +1,3 @@
 results/**
+src/pyemu/PMW-6-constantK/*/
+src/pyemu/PMW-6-constantK/*.log
