@@ -13,12 +13,12 @@ def process_heads_csv(model_name="MLAC-model"):
 
     path = ['.\\3d_injection_modeling_PMW-3\\', '.\\3d_injection_modeling_PMW-6\\']
     wells = ['PMW-3', 'PMW-6']
-    desired_order = [['time', 'HEAD_PW-1', 'HEAD_PMW-6', 'HEAD_PMW-10', 'HEAD_PMW-14',
-                        'HEAD_PW-2', 'HEAD_PMW-9', 'HEAD_PZ-1', 'HEAD_PMW-4', 'HEAD_PMW-5',
-                        'HEAD_OW24P', 'HEAD_OW23P', 'HEAD_OW17P'], 
-                ['time', 'HEAD_PW-1', 'HEAD_PMW-3', 'HEAD_PMW-10', 'HEAD_PMW-14',
-                        'HEAD_PW-2', 'HEAD_PMW-9', 'HEAD_PZ-1', 'HEAD_PMW-4', 'HEAD_PMW-5',
-                        'HEAD_OW24P', 'HEAD_OW23P', 'HEAD_OW17P']]
+    desired_order = [['time', 'HEAD_PW1-2', 'HEAD_PMW-6', 'HEAD_PMW-10', 'HEAD_PMW-14',
+                        'HEAD_PW2-2', 'HEAD_PMW-9', 'HEAD_PZ1-2', 'HEAD_PMW-4', 'HEAD_PMW-5',
+                        'HEAD_OW24P', 'HEAD_OW23P', 'HEAD_OW17P', 'HEAD_PW2-1', 'HEAD_PZ1-1', 'HEAD_PZ1-3'], 
+                ['time', 'HEAD_PW1-2', 'HEAD_PMW-3', 'HEAD_PMW-10', 'HEAD_PMW-14',
+                        'HEAD_PW2-2', 'HEAD_PMW-9', 'HEAD_PZ1-2', 'HEAD_PMW-4', 'HEAD_PMW-5',
+                        'HEAD_OW24P', 'HEAD_OW23P', 'HEAD_OW17P', 'HEAD_PW2-1', 'HEAD_PZ1-1', 'HEAD_PZ1-3']]
 
     for path, well, desired_order in zip(path, wells, desired_order): 
 
@@ -50,7 +50,7 @@ def process_heads_csv(model_name="MLAC-model"):
 
         for index, obs in obs_df.iterrows():
             well_name = obs['well_name']
-            layer, row, col = obs['layer'], obs['row'], obs['col']
+            layer, row, col = int(obs['layer']-1), obs['row'], obs['col']
             target_time = obs['time']
 
             # Find the time steps in the model output that bracket the target_time
